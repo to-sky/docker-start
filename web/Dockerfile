@@ -1,3 +1,5 @@
 FROM php:7.2-apache
+
 RUN docker-php-ext-install pdo_mysql \
-    && a2enmod rewrite
+    && a2enmod rewrite \
+    && service apache2 restart
